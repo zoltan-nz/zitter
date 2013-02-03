@@ -4,4 +4,4 @@
 # If you change this key, all old signed cookies will become invalid!
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
-Zitter::Application.config.secret_token = '245524063e86ff260ab4eeef36103d262e6e8561801a088ac388cc01cad39f5f1d564c0cca01ea2f821a4f4a19e1fbdbe6b7fda8e25cf92b4bdd4d23f94cc7b2'
+Zitter::Application.config.secret_token = '0a76e3f20604a5e74b4a146bb2ab0cbc07e80de82919b69b9a42ccb6a5771aaaca66aafd8c139a752ec2cbf2ef3b3f816d77970c7fc8e8bf3991db923cce7959'
