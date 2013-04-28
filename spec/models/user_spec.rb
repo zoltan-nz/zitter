@@ -100,4 +100,21 @@ describe User do
 
   end
 
+  describe "tweet associations" do
+
+    before(:each) do
+      @user = User.create(@attr)
+      @tw1 = FactoryGirl(:tweet, :user => @user, :created_at => 1.day.ago)
+      @tw2 = FactoryGirl(:tweet, :user => @user, :created_at => 1.hour.ago)
+    end
+
+    it "should have a tweets attribute" do
+      @user.should respond_to(:tweets)
+    end
+
+    it "should have the right tweets in the right order" do
+      @user.microposts.should == [@tw2, @tw1]
+    end 
+  end
+  
 end

@@ -1,0 +1,10 @@
+class Tweet < ActiveRecord::Base
+  attr_accessible :message
+
+  belongs_to :user
+
+  validates :message, :presence => true
+  validates :user_id, :presence => true
+
+  default_scope :order => 'tweets.created_at DESC'
+end

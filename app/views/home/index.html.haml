@@ -2,3 +2,7 @@
 - @users.each do |user|
   %p
     User: #{link_to user.name, user}
+- @tweets.each do |tweet|
+  %p
+    - user = @users[tweet.user_id]
+    Tweet: #{link_to tweet.message + "#{tweet.user_id}", user}
