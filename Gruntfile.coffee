@@ -3,4 +3,4 @@ module.exports = (grunt) ->
     jitGrunt:
       customTasksDir: 'tasks'
   grunt.initConfig {}
-  grunt.registerTask "default", []
+  grunt.registerTask "default", ['connect', 'watch']
